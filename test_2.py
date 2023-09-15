@@ -108,17 +108,17 @@ y_test = np.array(y_test)
 # print(y_test)
 # one hot encode the target
 
-classes_to_keep = ['male_angry', 'male_happy','male_sad', 'female_angry', 'female_happy','female_sad']
-df = df[df['labels'].isin(classes_to_keep)]
-print("My labels ")
-print(df['labels'].unique())
-print("Label count")
-print(df['labels'].value_counts())
+#classes_to_keep = ['male_angry', 'male_happy','male_sad', 'female_angry', 'female_happy','female_sad']
+#df = df[df['labels'].isin(classes_to_keep)]
+#print("My labels ")
+#print(df['labels'].unique())
+#print("Label count")
+#print(df['labels'].value_counts())
 
 lb = LabelEncoder()
-lb.fit(y_test)
-print("my classes")
-print(lb.classes_)
+#lb.fit(y_test)
+#print("my classes")
+#print(lb.classes_)
 
 # y_train = to_categorical(lb.fit_transform(y_train))
 print("Shape of y_test before to_categorical: ", y_test.shape)
@@ -129,6 +129,7 @@ print("Shape of y_test after to_categorical: ", y_test.shape)
 # Print the first few items
 print("First few items of y_test after to_categorical: ")
 print(y_test[:5])
+
 
 # print(X_train.shape)
 print(lb.classes_)
@@ -154,7 +155,6 @@ loaded_model.compile(loss='categorical_crossentropy', optimizer=opt, metrics=['a
 score = loaded_model.evaluate(X_test, y_test, verbose=0)
 print("%s: %.2f%%" % (loaded_model.metrics_names[1], score[1]*100))
 
-exit()
 # print('loaded_loss', loaded_loss)
 # print('loaded_accuracy', loaded_accuracy)
 
