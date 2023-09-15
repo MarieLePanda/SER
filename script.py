@@ -49,8 +49,8 @@ import os
 import pickle
 
 
-check_point_dir = "C:/Users/gprajapati/OneDrive - Microsoft/Hackathon_23/SER/male-female_3class/male_checkpoints"
-data_path = "C:/Users/gprajapati/OneDrive - Microsoft/Hackathon_23/SER/male-female_3class/Data_path.csv"
+check_point_dir = "/home/lgirardin/SER/male_checkpoints"
+data_path = "/home/lgirardin/SER/Data_path.csv"
 
 # lets pick up the meta-data that we got from our first part of the Kernel
 ref = pd.read_csv(data_path)

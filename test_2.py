@@ -49,9 +49,9 @@ import os
 import pickle
 
 
-check_point_model = "C:/Users/gprajapati/OneDrive - Microsoft/Hackathon_23/SER/male-female_3class/sgd/male_checkpoints/best_saved_CNN-31-0.58.h5"
-data_path = "C:/Users/gprajapati/OneDrive - Microsoft/Hackathon_23/SER/male-female_3class/Data_path_test.csv"
-test_results_file = "C:/Users/gprajapati/OneDrive - Microsoft/Hackathon_23/SER/male-female_3class/Data_path_test_sgd.csv"
+check_point_model = "/home/lgirardin/SER/sgd/male_checkpoints/best_saved_CNN-31-0.58.h5"
+data_path = "/home/lgirardin/SER/Data_path_test.csv"
+test_results_file = "/home/lgirardin/SER/Data_path_test_sgd.csv"
 
 # lets pick up the meta-data that we got from our first part of the Kernel
 ref = pd.read_csv(data_path)
@@ -93,7 +93,7 @@ print(df.shape)
 # Split between train and test
 X_train, X_test, y_train, y_test = train_test_split(df.drop(['path','labels','source'],axis=1)
                                                     , df.labels
-                                                    , test_size=9
+                                                    , test_size=12
                                                     , shuffle=True
                                                     , random_state=42
                                                    )
@@ -107,9 +107,28 @@ y_test = np.array(y_test)
 
 # print(y_test)
 # one hot encode the target
+
+classes_to_keep = ['male_angry', 'male_happy','male_sad', 'female_angry', 'female_happy','female_sad']
+df = df[df['labels'].isin(classes_to_keep)]
+print("My labels ")
+print(df['labels'].unique())
+print("Label count")
+print(df['labels'].value_counts())
+
 lb = LabelEncoder()
+lb.fit(y_test)
+print("my classes")
+print(lb.classes_)
+
 # y_train = to_categorical(lb.fit_transform(y_train))
+print("Shape of y_test before to_categorical: ", y_test.shape)
 y_test = to_categorical(lb.fit_transform(y_test))
+# Print the shape of the new y_test array
+print("Shape of y_test after to_categorical: ", y_test.shape)
+
+# Print the first few items
+print("First few items of y_test after to_categorical: ")
+print(y_test[:5])
 
 # print(X_train.shape)
 print(lb.classes_)
@@ -135,6 +154,7 @@ loaded_model.compile(loss='categorical_crossentropy', optimizer=opt, metrics=['a
 score = loaded_model.evaluate(X_test, y_test, verbose=0)
 print("%s: %.2f%%" % (loaded_model.metrics_names[1], score[1]*100))
 
+exit()
 # print('loaded_loss', loaded_loss)
 # print('loaded_accuracy', loaded_accuracy)
 

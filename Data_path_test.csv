@@ -1,11 +1,21 @@
 labels,source,path
-female_angry,local,C:/Users/gprajapati/OneDrive - Microsoft/Hackathon_23/SER/male-female_3class/local_data/angry_01.wav
-female_angry,local,C:/Users/gprajapati/OneDrive - Microsoft/Hackathon_23/SER/male-female_3class/local_data/angry_02.wav
-female_angry,local,C:/Users/gprajapati/OneDrive - Microsoft/Hackathon_23/SER/male-female_3class/local_data/angry_03.wav
-female_happy,local,C:/Users/gprajapati/OneDrive - Microsoft/Hackathon_23/SER/male-female_3class/local_data/happy_01.wav
-female_happy,local,C:/Users/gprajapati/OneDrive - Microsoft/Hackathon_23/SER/male-female_3class/local_data/happy_02.wav
-female_happy,local,C:/Users/gprajapati/OneDrive - Microsoft/Hackathon_23/SER/male-female_3class/local_data/happy_03.wav
-female_neutral,local,C:/Users/gprajapati/OneDrive - Microsoft/Hackathon_23/SER/male-female_3class/local_data/neutral_01.wav
-female_neutral,local,C:/Users/gprajapati/OneDrive - Microsoft/Hackathon_23/SER/male-female_3class/local_data/neutral_02.wav
-female_neutral,local,C:/Users/gprajapati/OneDrive - Microsoft/Hackathon_23/SER/male-female_3class/local_data/neutral_03.wav
-female_sad,local,C:/Users/gprajapati/OneDrive - Microsoft/Hackathon_23/SER/male-female_3class/local_data/sad_03.wav
+female_angry,local,local_data/angry_01.wav
+female_angry,local,local_data/angry_02.wav
+female_angry,local,local_data/angry_03.wav
+female_happy,local,local_data/happy_01.wav
+female_happy,local,local_data/happy_02.wav
+female_happy,local,local_data/happy_03.wav
+female_neutral,local,local_data/neutral_01.wav
+female_neutral,local,local_data/neutral_02.wav
+female_neutral,local,local_data/neutral_03.wav
+female_sad,local,local_data/sad_03.wav
+male_angry,local,local_data/sentence1_angry_1.wav
+male_angry,local,local_data/sentence2_angry_2.wav
+male_angry,local,local_data/angry_03.wav
+male_happy,local,local_data/sentence1_happy_1.wav
+male_happy,local,local_data/sentence2_happy_2.wav
+male_happy,local,local_data/happy_03.wav
+male_neutral,local,local_data/neutral_01.wav
+male_neutral,local,local_data/neutral_02.wav
+male_neutral,local,local_data/neutral_03.wav
+male_sad,local,local_data/sentence1_sad_1.wav

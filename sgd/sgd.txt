@@ -1,0 +1,383 @@
+"C:\Users\gprajapati\OneDrive - Microsoft\Hackathon_23\SER\venv\Scripts\python.exe" "C:\Users\gprajapati\OneDrive - Microsoft\Hackathon_23\SER\male-female_3class\script.py" 
+       labels source                                               path
+0  male_angry  SAVEE  C:/Users/gprajapati/OneDrive - Microsoft/Hacka...
+1  male_angry  SAVEE  C:/Users/gprajapati/OneDrive - Microsoft/Hacka...
+2  male_angry  SAVEE  C:/Users/gprajapati/OneDrive - Microsoft/Hacka...
+3  male_angry  SAVEE  C:/Users/gprajapati/OneDrive - Microsoft/Hacka...
+4  male_angry  SAVEE  C:/Users/gprajapati/OneDrive - Microsoft/Hacka...
+12162
+                                             feature
+0  [-4.6414213, -3.860898, -6.21919, -5.9265423, ...
+1  [-8.690716, -12.522837, -22.928043, -23.243807...
+2  [-8.814859, -12.819055, -24.178183, -23.84745,...
+3  [-2.2684252, -4.317077, -12.285238, -13.083024...
+4  [-13.485307, -16.26042, -25.884357, -27.827044...
+(12162, 262)
+             0          1          2          3    ...  255  256  257  258
+4950  -17.142696 -17.249537 -18.365582 -18.948351  ...  0.0  0.0  0.0  0.0
+3860  -13.285580 -16.784796 -23.058235 -22.435648  ...  0.0  0.0  0.0  0.0
+9761   -4.823564  -6.056048  -9.580621 -12.012061  ...  0.0  0.0  0.0  0.0
+7620   -7.031146  -4.253551  -4.534490  -5.836689  ...  0.0  0.0  0.0  0.0
+11586 -22.565975 -21.767015 -20.529488 -20.669310  ...  0.0  0.0  0.0  0.0
+7914  -20.082027 -18.982424 -17.009443 -16.944057  ...  0.0  0.0  0.0  0.0
+9513  -20.103537 -18.625866 -16.116106 -16.929594  ...  0.0  0.0  0.0  0.0
+5835  -21.078182 -18.671947 -17.676802 -18.009502  ...  0.0  0.0  0.0  0.0
+5389  -22.707441 -20.160748 -18.926155 -19.429979  ...  0.0  0.0  0.0  0.0
+11222 -20.008287 -17.640305 -19.188616 -18.435749  ...  0.0  0.0  0.0  0.0
+
+[10 rows x 259 columns]
+            0         1         2    ...      256       257       258
+4950   0.371987  0.350750  0.438038  ...  0.36276  0.358921  0.352152
+3860   0.650025  0.385068  0.089570  ...  0.36276  0.358921  0.352152
+9761   1.260003  1.177326  1.090395  ...  0.36276  0.358921  0.352152
+7620   1.100871  1.310430  1.465113  ...  0.36276  0.358921  0.352152
+11586 -0.018946  0.017160  0.277350  ...  0.36276  0.358921  0.352152
+7914   0.160108  0.222786  0.538743  ...  0.36276  0.358921  0.352152
+9513   0.158557  0.249116  0.605081  ...  0.36276  0.358921  0.352152
+5835   0.088301  0.245713  0.489186  ...  0.36276  0.358921  0.352152
+5389  -0.029143  0.135774  0.396411  ...  0.36276  0.358921  0.352152
+11222  0.165423  0.321894  0.376921  ...  0.36276  0.358921  0.352152
+
+[10 rows x 259 columns]
+(9121, 259)
+['female_angry' 'female_happy' 'female_sad' 'male_angry' 'male_happy'
+ 'male_sad']
+(9121, 259, 1)
+2023-09-08 12:41:09.758429: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE SSE2 SSE3 SSE4.1 SSE4.2 AVX AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING:absl:`lr` is deprecated in Keras optimizer, please use `learning_rate` or use the legacy optimizer, e.g.,tf.keras.optimizers.legacy.SGD.
+Model: "sequential"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ conv1d (Conv1D)             (None, 259, 256)          2304      
+                                                                 
+ activation (Activation)     (None, 259, 256)          0         
+                                                                 
+ conv1d_1 (Conv1D)           (None, 259, 256)          524544    
+                                                                 
+ batch_normalization (Batch  (None, 259, 256)          1024      
+ Normalization)                                                  
+                                                                 
+ activation_1 (Activation)   (None, 259, 256)          0         
+                                                                 
+ dropout (Dropout)           (None, 259, 256)          0         
+                                                                 
+ max_pooling1d (MaxPooling1  (None, 32, 256)           0         
+ D)                                                              
+                                                                 
+ conv1d_2 (Conv1D)           (None, 32, 128)           262272    
+                                                                 
+ activation_2 (Activation)   (None, 32, 128)           0         
+                                                                 
+ conv1d_3 (Conv1D)           (None, 32, 128)           131200    
+                                                                 
+ activation_3 (Activation)   (None, 32, 128)           0         
+                                                                 
+ conv1d_4 (Conv1D)           (None, 32, 128)           131200    
+                                                                 
+ activation_4 (Activation)   (None, 32, 128)           0         
+                                                                 
+ conv1d_5 (Conv1D)           (None, 32, 128)           131200    
+                                                                 
+ batch_normalization_1 (Bat  (None, 32, 128)           512       
+ chNormalization)                                                
+                                                                 
+ activation_5 (Activation)   (None, 32, 128)           0         
+                                                                 
+ dropout_1 (Dropout)         (None, 32, 128)           0         
+                                                                 
+ max_pooling1d_1 (MaxPoolin  (None, 4, 128)            0         
+ g1D)                                                            
+                                                                 
+ conv1d_6 (Conv1D)           (None, 4, 64)             65600     
+                                                                 
+ activation_6 (Activation)   (None, 4, 64)             0         
+                                                                 
+ conv1d_7 (Conv1D)           (None, 4, 64)             32832     
+                                                                 
+ activation_7 (Activation)   (None, 4, 64)             0         
+                                                                 
+ flatten (Flatten)           (None, 256)               0         
+                                                                 
+ dense (Dense)               (None, 6)                 1542      
+                                                                 
+ activation_8 (Activation)   (None, 6)                 0         
+                                                                 
+=================================================================
+Total params: 1284230 (4.90 MB)
+Trainable params: 1283462 (4.90 MB)
+Non-trainable params: 768 (3.00 KB)
+_________________________________________________________________
+Epoch 1/100
+570/571 [============================>.] - ETA: 0s - loss: 1.3516 - accuracy: 0.4288
+Epoch 1: val_accuracy improved from -inf to 0.40151, saving model to C:/Users/gprajapati/OneDrive - Microsoft/Hackathon_23/SER/male-female_3class/male_checkpoints\best_saved_CNN-01-0.40.h5
+571/571 [==============================] - 143s 246ms/step - loss: 1.3516 - accuracy: 0.4289 - val_loss: 1.3895 - val_accuracy: 0.4015
+Epoch 2/100
+570/571 [============================>.] - ETA: 0s - loss: 1.2322 - accuracy: 0.4780
+Epoch 2: val_accuracy improved from 0.40151 to 0.41993, saving model to C:/Users/gprajapati/OneDrive - Microsoft/Hackathon_23/SER/male-female_3class/male_checkpoints\best_saved_CNN-02-0.42.h5
+571/571 [==============================] - 133s 233ms/step - loss: 1.2322 - accuracy: 0.4779 - val_loss: 1.3384 - val_accuracy: 0.4199
+Epoch 3/100
+570/571 [============================>.] - ETA: 0s - loss: 1.1851 - accuracy: 0.4970
+Epoch 3: val_accuracy did not improve from 0.41993
+571/571 [==============================] - 125s 219ms/step - loss: 1.1851 - accuracy: 0.4970 - val_loss: 2.0746 - val_accuracy: 0.3236
+Epoch 4/100
+570/571 [============================>.] - ETA: 0s - loss: 1.1534 - accuracy: 0.5129
+Epoch 4: val_accuracy improved from 0.41993 to 0.51134, saving model to C:/Users/gprajapati/OneDrive - Microsoft/Hackathon_23/SER/male-female_3class/male_checkpoints\best_saved_CNN-04-0.51.h5
+571/571 [==============================] - 127s 222ms/step - loss: 1.1533 - accuracy: 0.5130 - val_loss: 1.1756 - val_accuracy: 0.5113
+Epoch 5/100
+570/571 [============================>.] - ETA: 0s - loss: 1.1124 - accuracy: 0.5309
+Epoch 5: val_accuracy did not improve from 0.51134
+571/571 [==============================] - 129s 226ms/step - loss: 1.1123 - accuracy: 0.5310 - val_loss: 1.1706 - val_accuracy: 0.5015
+Epoch 6/100
+570/571 [============================>.] - ETA: 0s - loss: 1.0856 - accuracy: 0.5412
+Epoch 6: val_accuracy did not improve from 0.51134
+571/571 [==============================] - 145s 254ms/step - loss: 1.0857 - accuracy: 0.5412 - val_loss: 1.4874 - val_accuracy: 0.4176
+Epoch 7/100
+570/571 [============================>.] - ETA: 0s - loss: 1.0771 - accuracy: 0.5395
+Epoch 7: val_accuracy did not improve from 0.51134
+571/571 [==============================] - 189s 332ms/step - loss: 1.0770 - accuracy: 0.5395 - val_loss: 1.4276 - val_accuracy: 0.4344
+Epoch 8/100
+570/571 [============================>.] - ETA: 0s - loss: 1.0603 - accuracy: 0.5513
+Epoch 8: val_accuracy improved from 0.51134 to 0.53436, saving model to C:/Users/gprajapati/OneDrive - Microsoft/Hackathon_23/SER/male-female_3class/male_checkpoints\best_saved_CNN-08-0.53.h5
+571/571 [==============================] - 153s 268ms/step - loss: 1.0603 - accuracy: 0.5513 - val_loss: 1.1248 - val_accuracy: 0.5344
+Epoch 9/100
+570/571 [============================>.] - ETA: 0s - loss: 1.0358 - accuracy: 0.5632
+Epoch 9: val_accuracy did not improve from 0.53436
+571/571 [==============================] - 133s 234ms/step - loss: 1.0359 - accuracy: 0.5631 - val_loss: 1.2238 - val_accuracy: 0.4834
+Epoch 10/100
+570/571 [============================>.] - ETA: 0s - loss: 1.0201 - accuracy: 0.5672
+Epoch 10: val_accuracy improved from 0.53436 to 0.53765, saving model to C:/Users/gprajapati/OneDrive - Microsoft/Hackathon_23/SER/male-female_3class/male_checkpoints\best_saved_CNN-10-0.54.h5
+571/571 [==============================] - 137s 241ms/step - loss: 1.0201 - accuracy: 0.5673 - val_loss: 1.1124 - val_accuracy: 0.5377
+Epoch 11/100
+570/571 [============================>.] - ETA: 0s - loss: 1.0026 - accuracy: 0.5709
+Epoch 11: val_accuracy did not improve from 0.53765
+571/571 [==============================] - 143s 250ms/step - loss: 1.0027 - accuracy: 0.5709 - val_loss: 1.4164 - val_accuracy: 0.4387
+Epoch 12/100
+570/571 [============================>.] - ETA: 0s - loss: 0.9968 - accuracy: 0.5799
+Epoch 12: val_accuracy improved from 0.53765 to 0.55081, saving model to C:/Users/gprajapati/OneDrive - Microsoft/Hackathon_23/SER/male-female_3class/male_checkpoints\best_saved_CNN-12-0.55.h5
+571/571 [==============================] - 136s 237ms/step - loss: 0.9968 - accuracy: 0.5800 - val_loss: 1.0852 - val_accuracy: 0.5508
+Epoch 13/100
+570/571 [============================>.] - ETA: 0s - loss: 0.9744 - accuracy: 0.5909
+Epoch 13: val_accuracy did not improve from 0.55081
+571/571 [==============================] - 139s 244ms/step - loss: 0.9744 - accuracy: 0.5909 - val_loss: 1.2012 - val_accuracy: 0.4827
+Epoch 14/100
+570/571 [============================>.] - ETA: 0s - loss: 0.9678 - accuracy: 0.5936
+Epoch 14: val_accuracy did not improve from 0.55081
+571/571 [==============================] - 129s 226ms/step - loss: 0.9678 - accuracy: 0.5937 - val_loss: 1.1053 - val_accuracy: 0.5209
+Epoch 15/100
+570/571 [============================>.] - ETA: 0s - loss: 0.9629 - accuracy: 0.5955
+Epoch 15: val_accuracy improved from 0.55081 to 0.55804, saving model to C:/Users/gprajapati/OneDrive - Microsoft/Hackathon_23/SER/male-female_3class/male_checkpoints\best_saved_CNN-15-0.56.h5
+571/571 [==============================] - 138s 242ms/step - loss: 0.9628 - accuracy: 0.5955 - val_loss: 1.0365 - val_accuracy: 0.5580
+Epoch 16/100
+570/571 [============================>.] - ETA: 0s - loss: 0.9405 - accuracy: 0.6020
+Epoch 16: val_accuracy did not improve from 0.55804
+571/571 [==============================] - 130s 228ms/step - loss: 0.9407 - accuracy: 0.6019 - val_loss: 1.1365 - val_accuracy: 0.5044
+Epoch 17/100
+570/571 [============================>.] - ETA: 0s - loss: 0.9333 - accuracy: 0.6118
+Epoch 17: val_accuracy did not improve from 0.55804
+571/571 [==============================] - 131s 229ms/step - loss: 0.9332 - accuracy: 0.6119 - val_loss: 1.0604 - val_accuracy: 0.5528
+Epoch 18/100
+570/571 [============================>.] - ETA: 0s - loss: 0.9147 - accuracy: 0.6177
+Epoch 18: val_accuracy did not improve from 0.55804
+571/571 [==============================] - 141s 246ms/step - loss: 0.9146 - accuracy: 0.6177 - val_loss: 1.2068 - val_accuracy: 0.4890
+Epoch 19/100
+570/571 [============================>.] - ETA: 0s - loss: 0.9096 - accuracy: 0.6203
+Epoch 19: val_accuracy did not improve from 0.55804
+571/571 [==============================] - 132s 231ms/step - loss: 0.9096 - accuracy: 0.6202 - val_loss: 1.1194 - val_accuracy: 0.5189
+Epoch 20/100
+570/571 [============================>.] - ETA: 0s - loss: 0.8952 - accuracy: 0.6262
+Epoch 20: val_accuracy did not improve from 0.55804
+571/571 [==============================] - 129s 226ms/step - loss: 0.8953 - accuracy: 0.6261 - val_loss: 1.4001 - val_accuracy: 0.4406
+Epoch 21/100
+570/571 [============================>.] - ETA: 0s - loss: 0.8908 - accuracy: 0.6258
+Epoch 21: val_accuracy did not improve from 0.55804
+571/571 [==============================] - 131s 229ms/step - loss: 0.8908 - accuracy: 0.6257 - val_loss: 1.1801 - val_accuracy: 0.5071
+Epoch 22/100
+570/571 [============================>.] - ETA: 0s - loss: 0.8778 - accuracy: 0.6343
+Epoch 22: val_accuracy did not improve from 0.55804
+571/571 [==============================] - 129s 226ms/step - loss: 0.8778 - accuracy: 0.6343 - val_loss: 1.2593 - val_accuracy: 0.5002
+Epoch 23/100
+570/571 [============================>.] - ETA: 0s - loss: 0.8608 - accuracy: 0.6401
+Epoch 23: val_accuracy did not improve from 0.55804
+571/571 [==============================] - 136s 237ms/step - loss: 0.8610 - accuracy: 0.6401 - val_loss: 1.7539 - val_accuracy: 0.3598
+Epoch 24/100
+570/571 [============================>.] - ETA: 0s - loss: 0.8626 - accuracy: 0.6400
+Epoch 24: val_accuracy did not improve from 0.55804
+571/571 [==============================] - 134s 234ms/step - loss: 0.8627 - accuracy: 0.6400 - val_loss: 2.1186 - val_accuracy: 0.3311
+Epoch 25/100
+570/571 [============================>.] - ETA: 0s - loss: 0.8538 - accuracy: 0.6524
+Epoch 25: val_accuracy did not improve from 0.55804
+571/571 [==============================] - 130s 228ms/step - loss: 0.8540 - accuracy: 0.6523 - val_loss: 1.4145 - val_accuracy: 0.3949
+Epoch 26/100
+570/571 [============================>.] - ETA: 0s - loss: 0.8342 - accuracy: 0.6535
+Epoch 26: val_accuracy did not improve from 0.55804
+571/571 [==============================] - 134s 235ms/step - loss: 0.8343 - accuracy: 0.6534 - val_loss: 1.1196 - val_accuracy: 0.4979
+Epoch 27/100
+570/571 [============================>.] - ETA: 0s - loss: 0.8076 - accuracy: 0.6666
+Epoch 27: val_accuracy did not improve from 0.55804
+571/571 [==============================] - 131s 229ms/step - loss: 0.8076 - accuracy: 0.6666 - val_loss: 1.2843 - val_accuracy: 0.4867
+Epoch 28/100
+570/571 [============================>.] - ETA: 0s - loss: 0.8001 - accuracy: 0.6655
+Epoch 28: val_accuracy did not improve from 0.55804
+571/571 [==============================] - 131s 229ms/step - loss: 0.8003 - accuracy: 0.6654 - val_loss: 1.6371 - val_accuracy: 0.3456
+Epoch 29/100
+570/571 [============================>.] - ETA: 0s - loss: 0.8034 - accuracy: 0.6726
+Epoch 29: val_accuracy did not improve from 0.55804
+571/571 [==============================] - 135s 237ms/step - loss: 0.8034 - accuracy: 0.6726 - val_loss: 1.1553 - val_accuracy: 0.5278
+Epoch 30/100
+570/571 [============================>.] - ETA: 0s - loss: 0.7700 - accuracy: 0.6878
+Epoch 30: val_accuracy did not improve from 0.55804
+571/571 [==============================] - 127s 222ms/step - loss: 0.7702 - accuracy: 0.6878 - val_loss: 2.9710 - val_accuracy: 0.3232
+Epoch 31/100
+570/571 [============================>.] - ETA: 0s - loss: 0.8019 - accuracy: 0.6749
+Epoch 31: val_accuracy improved from 0.55804 to 0.57810, saving model to C:/Users/gprajapati/OneDrive - Microsoft/Hackathon_23/SER/male-female_3class/male_checkpoints\best_saved_CNN-31-0.58.h5
+571/571 [==============================] - 136s 238ms/step - loss: 0.8018 - accuracy: 0.6749 - val_loss: 1.0313 - val_accuracy: 0.5781
+Epoch 32/100
+570/571 [============================>.] - ETA: 0s - loss: 0.7431 - accuracy: 0.6940
+Epoch 32: val_accuracy did not improve from 0.57810
+571/571 [==============================] - 139s 244ms/step - loss: 0.7430 - accuracy: 0.6940 - val_loss: 1.0604 - val_accuracy: 0.5607
+Epoch 33/100
+570/571 [============================>.] - ETA: 0s - loss: 0.7297 - accuracy: 0.7033
+Epoch 33: val_accuracy did not improve from 0.57810
+571/571 [==============================] - 131s 229ms/step - loss: 0.7298 - accuracy: 0.7032 - val_loss: 1.1035 - val_accuracy: 0.5383
+Epoch 34/100
+570/571 [============================>.] - ETA: 0s - loss: 0.7220 - accuracy: 0.7078
+Epoch 34: val_accuracy did not improve from 0.57810
+571/571 [==============================] - 140s 246ms/step - loss: 0.7219 - accuracy: 0.7078 - val_loss: 1.1477 - val_accuracy: 0.5238
+Epoch 35/100
+570/571 [============================>.] - ETA: 0s - loss: 0.6937 - accuracy: 0.7231
+Epoch 35: val_accuracy did not improve from 0.57810
+571/571 [==============================] - 133s 232ms/step - loss: 0.6938 - accuracy: 0.7231 - val_loss: 1.2113 - val_accuracy: 0.5012
+Epoch 36/100
+570/571 [============================>.] - ETA: 0s - loss: 0.6945 - accuracy: 0.7152
+Epoch 36: val_accuracy did not improve from 0.57810
+571/571 [==============================] - 135s 236ms/step - loss: 0.6944 - accuracy: 0.7153 - val_loss: 1.1544 - val_accuracy: 0.5386
+Epoch 37/100
+570/571 [============================>.] - ETA: 0s - loss: 0.6617 - accuracy: 0.7323
+Epoch 37: val_accuracy did not improve from 0.57810
+571/571 [==============================] - 132s 232ms/step - loss: 0.6619 - accuracy: 0.7323 - val_loss: 1.4380 - val_accuracy: 0.4702
+Epoch 38/100
+570/571 [============================>.] - ETA: 0s - loss: 0.6706 - accuracy: 0.7302
+Epoch 38: val_accuracy did not improve from 0.57810
+571/571 [==============================] - 130s 227ms/step - loss: 0.6705 - accuracy: 0.7302 - val_loss: 1.3161 - val_accuracy: 0.5100
+Epoch 39/100
+570/571 [============================>.] - ETA: 0s - loss: 0.6499 - accuracy: 0.7337
+Epoch 39: val_accuracy did not improve from 0.57810
+571/571 [==============================] - 133s 232ms/step - loss: 0.6499 - accuracy: 0.7337 - val_loss: 1.2002 - val_accuracy: 0.5301
+Epoch 40/100
+570/571 [============================>.] - ETA: 0s - loss: 0.6194 - accuracy: 0.7476
+Epoch 40: val_accuracy did not improve from 0.57810
+571/571 [==============================] - 128s 224ms/step - loss: 0.6193 - accuracy: 0.7476 - val_loss: 1.1083 - val_accuracy: 0.5600
+Epoch 41/100
+570/571 [============================>.] - ETA: 0s - loss: 0.5936 - accuracy: 0.7624
+Epoch 41: val_accuracy did not improve from 0.57810
+571/571 [==============================] - 124s 217ms/step - loss: 0.5936 - accuracy: 0.7624 - val_loss: 1.6221 - val_accuracy: 0.4910
+Epoch 42/100
+570/571 [============================>.] - ETA: 0s - loss: 0.5875 - accuracy: 0.7712
+Epoch 42: val_accuracy did not improve from 0.57810
+571/571 [==============================] - 129s 225ms/step - loss: 0.5875 - accuracy: 0.7712 - val_loss: 1.2024 - val_accuracy: 0.5380
+Epoch 43/100
+570/571 [============================>.] - ETA: 0s - loss: 0.5719 - accuracy: 0.7705
+Epoch 43: val_accuracy did not improve from 0.57810
+571/571 [==============================] - 126s 220ms/step - loss: 0.5718 - accuracy: 0.7705 - val_loss: 1.3277 - val_accuracy: 0.5100
+Epoch 44/100
+570/571 [============================>.] - ETA: 0s - loss: 0.5212 - accuracy: 0.7923
+Epoch 44: val_accuracy did not improve from 0.57810
+571/571 [==============================] - 128s 225ms/step - loss: 0.5212 - accuracy: 0.7923 - val_loss: 1.8487 - val_accuracy: 0.4551
+Epoch 45/100
+570/571 [============================>.] - ETA: 0s - loss: 0.5221 - accuracy: 0.7914
+Epoch 45: val_accuracy did not improve from 0.57810
+571/571 [==============================] - 126s 221ms/step - loss: 0.5220 - accuracy: 0.7915 - val_loss: 1.1368 - val_accuracy: 0.5617
+Epoch 46/100
+570/571 [============================>.] - ETA: 0s - loss: 0.4796 - accuracy: 0.8138
+Epoch 46: val_accuracy did not improve from 0.57810
+571/571 [==============================] - 125s 219ms/step - loss: 0.4799 - accuracy: 0.8137 - val_loss: 3.9326 - val_accuracy: 0.1848
+Epoch 47/100
+570/571 [============================>.] - ETA: 0s - loss: 0.6067 - accuracy: 0.7560
+Epoch 47: val_accuracy did not improve from 0.57810
+571/571 [==============================] - 127s 223ms/step - loss: 0.6070 - accuracy: 0.7559 - val_loss: 5.2491 - val_accuracy: 0.2821
+Epoch 48/100
+570/571 [============================>.] - ETA: 0s - loss: 0.6957 - accuracy: 0.7282
+Epoch 48: val_accuracy did not improve from 0.57810
+571/571 [==============================] - 126s 221ms/step - loss: 0.6956 - accuracy: 0.7282 - val_loss: 1.2773 - val_accuracy: 0.5192
+Epoch 49/100
+570/571 [============================>.] - ETA: 0s - loss: 0.4942 - accuracy: 0.8053
+Epoch 49: val_accuracy did not improve from 0.57810
+571/571 [==============================] - 138s 242ms/step - loss: 0.4941 - accuracy: 0.8053 - val_loss: 1.2389 - val_accuracy: 0.5261
+Epoch 50/100
+570/571 [============================>.] - ETA: 0s - loss: 0.4431 - accuracy: 0.8265
+Epoch 50: val_accuracy did not improve from 0.57810
+571/571 [==============================] - 137s 240ms/step - loss: 0.4430 - accuracy: 0.8266 - val_loss: 1.2629 - val_accuracy: 0.5590
+Epoch 51/100
+570/571 [============================>.] - ETA: 0s - loss: 0.4216 - accuracy: 0.8336
+Epoch 51: val_accuracy did not improve from 0.57810
+571/571 [==============================] - 129s 225ms/step - loss: 0.4222 - accuracy: 0.8335 - val_loss: 2.3503 - val_accuracy: 0.3334
+Epoch 51: early stopping
+Save model and weights at C:\Users\gprajapati\OneDrive - Microsoft\Hackathon_23\SER\male-female_3class\saved_models\Emotion_Model.h5 
+Loaded model from disk
+WARNING:absl:`lr` is deprecated in Keras optimizer, please use `learning_rate` or use the legacy optimizer, e.g.,tf.keras.optimizers.legacy.SGD.
+accuracy: 33.34%
+191/191 [==============================] - 11s 56ms/step
+[[4.2000558e-04 8.1857806e-03 9.5996815e-01 1.2208868e-03 3.2136065e-03
+  2.6991574e-02]
+ [1.0241606e-04 2.7402653e-03 9.9570638e-01 7.9952639e-05 7.1614049e-04
+  6.5486174e-04]
+ [1.0914493e-01 1.7174035e-02 4.7872052e-01 4.4232585e-02 2.5441591e-02
+  3.2528627e-01]
+ ...
+ [5.8151442e-03 2.1604322e-02 8.8134682e-01 5.2059451e-03 6.2840255e-03
+  7.9743721e-02]
+ [2.4864855e-03 1.0899708e-02 9.4329071e-01 2.0153446e-03 9.8326979e-03
+  3.1474974e-02]
+ [1.7070301e-01 1.4375566e-01 4.7241223e-01 1.3008943e-01 5.3562582e-02
+  2.9477028e-02]]
+[2 2 2 ... 2 2 2]
+     actualvalues predictedvalues
+170      male_sad      female_sad
+171  female_happy      female_sad
+172    male_angry      female_sad
+173    female_sad      female_sad
+174    male_angry        male_sad
+175    female_sad      female_sad
+176    male_happy        male_sad
+177    female_sad      female_sad
+178  female_happy      female_sad
+179  female_happy      female_sad
+0.3334429463992108
+              precision    recall  f1-score   support
+
+female_angry       0.23      0.13      0.17       281
+female_happy       0.90      0.03      0.06       658
+  female_sad       0.32      0.99      0.48       826
+  male_angry       0.59      0.14      0.23       209
+  male_happy       0.58      0.08      0.15       456
+    male_sad       0.49      0.12      0.19       611
+
+    accuracy                           0.33      3041
+   macro avg       0.52      0.25      0.21      3041
+weighted avg       0.53      0.33      0.23      3041
+
+0.6606379480434068
+              precision    recall  f1-score   support
+
+      female       0.63      1.00      0.77      1765
+        male       0.97      0.20      0.33      1276
+
+    accuracy                           0.66      3041
+   macro avg       0.80      0.60      0.55      3041
+weighted avg       0.77      0.66      0.59      3041
+
+0.5133179875041105
+              precision    recall  f1-score   support
+
+       angry       0.57      0.25      0.35       490
+       happy       0.67      0.05      0.10      1114
+         sad       0.50      0.96      0.66      1437
+
+    accuracy                           0.51      3041
+   macro avg       0.58      0.42      0.37      3041
+weighted avg       0.58      0.51      0.40      3041
+
+
+Process finished with exit code 0
